@@ -1902,3 +1902,124 @@ p { color: var(--text-body); font-size: 1rem; line-height: 1.75; }
   .stats-row { grid-template-columns: 1fr; }
   .branches-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== HOMEPAGE RESPONSIVE FIX ONLY ===== */
+@media (max-width: 1024px) {
+  body.home .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 130px 5% 80px;
+  }
+
+  body.home .hero-visual {
+    display: none;
+  }
+
+  body.home .hero-actions {
+    justify-content: center;
+  }
+
+  body.home .hero-stats {
+    justify-content: center;
+  }
+
+  body.home .hero-desc {
+    margin: 0 auto 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body.home .hero {
+    padding-top: 110px;
+  }
+
+  body.home .hero-title {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+}
+
+@media (max-width: 480px) {
+  body.home .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ===== BLOG NEWSLETTER RESPONSIVE FIX (SAFE OVERRIDE ONLY) ===== */
+
+@media (max-width: 1024px) {
+  .newsletter-card {
+    padding: 2.5rem 2rem;
+    gap: 2rem;
+  }
+
+  .newsletter-left {
+    flex: 1 1 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .newsletter-left div {
+    text-align: center;
+  }
+
+  .newsletter-form {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .newsletter-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .newsletter-left {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .newsletter-input-wrap {
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 0.6rem;
+  }
+
+  .newsletter-input {
+    width: 100%;
+    text-align: center;
+    padding: 0.9rem;
+  }
+
+  .newsletter-btn {
+    width: 100%;
+    justify-content: center;
+    border-radius: 12px;
+    margin-top: 0.5rem;
+  }
+
+  .newsletter-note {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .newsletter-left h3 {
+    font-size: 1.1rem;
+  }
+
+  .newsletter-left p {
+    font-size: 0.8rem;
+  }
+
+  .newsletter-btn {
+    font-size: 0.8rem;
+  }
+}
