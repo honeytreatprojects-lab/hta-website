@@ -1222,6 +1222,21 @@ p { color: var(--text-body); font-size: 1rem; line-height: 1.75; }
     grid-template-columns: 1fr;
   }
 }
+/* ===== NAV FIX FOR TABLET (PREVENT OVERFLOW) ===== */
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
 .social-links {
   display: flex;
   flex-direction: row;
