@@ -1226,14 +1226,26 @@ p { color: var(--text-body); font-size: 1rem; line-height: 1.75; }
 @media (max-width: 1024px) {
   .nav-links {
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    background: white;
+    padding: 1rem 1.5rem 1.5rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    gap: 0.2rem;
+    z-index: 999;
   }
-
   .nav-links.open {
     display: flex;
   }
-
+  .nav-link { color: var(--text-body) !important; }
   .hamburger {
     display: flex;
+    margin-left: auto;
+  }
+  .nav-container {
+    position: relative;
   }
 }
 
@@ -1877,7 +1889,7 @@ p { color: var(--text-body); font-size: 1rem; line-height: 1.75; }
   .hero-desc { margin: 0 auto 2.5rem; }
   .about-grid { grid-template-columns: 1fr; gap: 3rem; }
   .alumni-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr 1fr; }
   .team-grid { grid-template-columns: repeat(3, 1fr); }
   .stats-row { grid-template-columns: repeat(2, 1fr); }
   .blog-grid { grid-template-columns: 1fr; }
@@ -1890,7 +1902,13 @@ p { color: var(--text-body); font-size: 1rem; line-height: 1.75; }
   .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: white; padding: 1rem 1.5rem 2rem; box-shadow: var(--shadow-md); gap: 0.25rem; }
   .nav-links.open { display: flex; }
   .nav-link { color: var(--text-body) !important; }
-  .navbar { background: rgba(26, 74, 46, 0.98) !important; }
+  .hero { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
+  .hero { grid-template-columns: 1fr !important; width: 100% !important; overflow-x: hidden !important; padding: 100px 1.25rem 60px !important; }
+.hero-content { width: 100% !important; max-width: 100% !important; }
+.hero-desc { max-width: 100% !important; margin: 0 auto 2rem; }
+.hero-actions { flex-direction: column; align-items: center; }
+.hero-actions .btn { width: 100%; max-width: 280px; justify-content: center; }
+.stat-divider { display: none; }
   .hamburger { display: flex; }
   .pillars-grid { grid-template-columns: 1fr; }
   .offerings-grid { grid-template-columns: repeat(2, 1fr); }
