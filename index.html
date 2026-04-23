@@ -86,9 +86,20 @@
 /* TRACK (MOVING LINE) */
 .partners-track {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   width: max-content;
   animation: scrollLogos 30s linear infinite;
+  will-change: transform;
+}
+.partners-marquee{
+  overflow:hidden;
+  width:100%;
+  max-width:100%;
+}
+
+html, body{
+  max-width:100%;
+  overflow-x:hidden;
 }
 
 /* LOGO CARD */
