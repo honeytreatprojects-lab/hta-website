@@ -78,13 +78,13 @@
       overflow: hidden;
     }
     .ccc-dynamic-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center; /* 👈 shifts focus to head area */
-  display: block;
-  transition: transform 0.45s ease;
-}
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.45s ease;
+    }
     .ccc-dynamic-card:hover .ccc-dynamic-img { transform: scale(1.05); }
 
     .ccc-dynamic-body {
@@ -182,38 +182,62 @@
       display: block;
     }
 
-    .ccc-enroll-btn {
-      display: block;
-      text-align: center;
-      margin-top: 1rem;
-      padding: 0.65rem 1rem;
-      background: var(--green-main);
-      color: white;
-      border-radius: 100px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-    .ccc-enroll-btn:hover {
-      background: var(--green-dark);
-      transform: translateY(-2px);
-    }
+   .ccc-enroll-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
 
-    /* CTA enroll card */
-    .ccc-enroll-cta-card {
-      background: var(--purple-main);
-      border-radius: 20px;
-      padding: 2rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      gap: 1.25rem;
-    }
-    .ccc-enroll-avatars {
-      display: flex;
-      align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.7rem 1.2rem;
+
+  background: var(--green-main);
+  color: white;
+
+  border: none;          /* 👈 removes border */
+  outline: none;         /* 👈 removes focus outline default look */
+
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  cursor: pointer;       /* 👈 important for buttons */
+  transition: all 0.25s ease;
+}
+.ccc-enroll-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.25);
+}
+
+  .ccc-enroll-cta-card {
+  background: var(--purple-main);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.25rem;
+
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* IMPORTANT: remove default button styling globally for this card if it's a button */
+ .ccc-enroll-cta-card button {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: white;
+}
+  .ccc-enroll-avatars {
+    display: flex;
+    align-items: center;
     }
     .ccc-av {
       width: 40px; height: 40px;
@@ -323,6 +347,7 @@
             <ul class="ccc-check-list">
               <li><span class="ccc-check-icon"></span>Akilo Centre (Lagos)</li>
               <li><span class="ccc-check-icon"></span>Abule Egba Centre (Lagos)</li>
+              <li><span class="ccc-check-icon"></span>Abuja Centre (Abuja)</li>
               <li><span class="ccc-check-icon"></span>Osogbo Centre (Osun)</li>
               <li><span class="ccc-check-icon"></span>Monatan Centre (Ibadan)</li>
             </ul>
@@ -344,7 +369,7 @@
               <li><span class="ccc-check-icon"></span>Construction Site Management</li>
             </ul>
           </div>
-          <a href="connect.html" class="ccc-enroll-btn">Enroll Now</a>
+          <button class="ccc-enroll-btn" onclick="openEnrollModal('Construction Skills', ['Akilo Centre (Lagos)','Abule Egba Centre (Lagos)','Osogbo Centre (Osun)','Monatan Centre (Ibadan)','Abuja Centre (Abuja)'])">Enroll Now</button>
         </div>
       </div>
 
@@ -380,7 +405,7 @@
               <li><span class="ccc-check-icon"></span>Post-Harvest Technology & Value Addition</li>
             </ul>
           </div>
-          <a href="connect.html" class="ccc-enroll-btn">Enroll Now</a>
+          <button class="ccc-enroll-btn" onclick="openEnrollModal('Agripreneur Skills', ['Abule Egba Centre (Lagos)','Osogbo Centre (Osun)','Monatan Centre (Ibadan)'])">Enroll Now</button>
         </div>
       </div>
 
@@ -418,7 +443,7 @@
               <li><span class="ccc-check-icon"></span>Digital Marketing</li>
             </ul>
           </div>
-          <a href="connect.html" class="ccc-enroll-btn">Enroll Now</a>
+          <button class="ccc-enroll-btn" onclick="openEnrollModal('Digital Skills', ['Tijani Bello Centre (Lagos)','Magodo Centre (Lagos)','Abule Egba Centre (Lagos)','Osogbo Centre (Osun)','Monatan Centre (Ibadan)'])">Enroll Now</button>
         </div>
       </div>
 
@@ -452,7 +477,7 @@
               <li><span class="ccc-check-icon"></span>Video Editing</li>
             </ul>
           </div>
-          <a href="connect.html" class="ccc-enroll-btn">Enroll Now</a>
+          <button class="ccc-enroll-btn" onclick="openEnrollModal('Entertainment Skills', ['Magodo Centre (Lagos)'])">Enroll Now</button>
         </div>
       </div>
 
@@ -462,10 +487,10 @@
           <img src="testi-chukwudi.png" alt="" class="ccc-av">
           <img src="testi-tunde.png" alt="" class="ccc-av">
           <img src="testi-emeka.png" alt="" class="ccc-av">
-          <span class="ccc-av-count">3000+</span>
+          <span class="ccc-av-count">700+</span>
         </div>
         <p class="ccc-enroll-text">Unlock your potential and start earning with in-demand skills.</p>
-        <a href="connect.html" class="ccc-enroll-main-btn">Enroll Now</a>
+        <button class="ccc-enroll-main-btn" onclick="openEnrollModal('All Courses', ['Akilo Centre (Lagos)','Abule Egba Centre (Lagos)','Osogbo Centre (Osun)','Abuja Centre (Abuja)','Monatan Centre (Ibadan)','Tijani Bello Centre (Lagos)','Magodo Centre (Lagos)'])">Enroll Now</button>
       </div>
 
     </div>
@@ -1056,6 +1081,412 @@
       panel.classList.add('open');
     }
   }
+</script>
+
+<!-- ===== ENROLLMENT MODAL ===== -->
+<div class="enroll-modal-overlay" id="enrollModalOverlay" onclick="closeEnrollModal(event)">
+  <div class="enroll-modal" id="enrollModal">
+
+    <!-- STEP 1: Pick a Centre -->
+    <div class="enroll-step" id="enrollStep1">
+      <button class="enroll-close" onclick="closeEnrollModalBtn()">✕</button>
+      <div class="enroll-modal-header">
+        <div class="enroll-modal-tag">Enrollment</div>
+        <h3 id="enrollCourseTitle">Construction Skills</h3>
+        <p>Select the centre closest to you to proceed.</p>
+      </div>
+      <div class="enroll-centres-list" id="enrollCentresList"></div>
+    </div>
+
+    <!-- STEP 2: Enrollment Form -->
+    <div class="enroll-step" id="enrollStep2" style="display:none;">
+      <button class="enroll-close" onclick="closeEnrollModalBtn()">✕</button>
+      <button class="enroll-back" onclick="backToStep1()">← Back</button>
+      <div class="enroll-modal-header">
+        <div class="enroll-modal-tag">Enrollment Form</div>
+        <h3 id="enrollFormTitle">Construction Skills</h3>
+        <p id="enrollSelectedCentre" style="color:var(--green-main);font-weight:600;font-size:0.9rem;"></p>
+      </div>
+      <form id="enrollForm" onsubmit="submitEnrollForm(event)">
+        <div class="enroll-form-row">
+          <div class="enroll-form-group">
+            <label>First Name *</label>
+            <input type="text" name="firstName" placeholder="e.g. Chukwudi" required>
+          </div>
+          <div class="enroll-form-group">
+            <label>Last Name *</label>
+            <input type="text" name="lastName" placeholder="e.g. Eze" required>
+          </div>
+        </div>
+        <div class="enroll-form-group">
+          <label>Email Address *</label>
+          <input type="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="enroll-form-group">
+          <label>Phone Number *</label>
+          <input type="tel" name="phone" placeholder="+234 800 000 0000" required>
+        </div>
+        <div class="enroll-form-group">
+          <label>Message / Questions (optional)</label>
+          <textarea name="message" placeholder="Any questions or special requirements?" rows="3"></textarea>
+        </div>
+        <input type="hidden" name="course" id="hiddenCourse">
+        <input type="hidden" name="centre" id="hiddenCentre">
+        <button type="submit" class="enroll-submit-btn" id="enrollSubmitBtn">
+          <span id="enrollBtnText">Submit Enrollment</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </form>
+      <!-- Success state -->
+      <div class="enroll-success" id="enrollSuccess" style="display:none;">
+        <div class="enroll-success-icon">✓</div>
+        <h4>Enrollment Received!</h4>
+        <p>Thank you! Your enrollment request has been sent to the <strong id="successCentreName"></strong>. The team will contact you shortly.</p>
+        <button class="enroll-submit-btn" onclick="closeEnrollModalBtn()" style="margin-top:1.5rem;">Done</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+/* ===== ENROLLMENT MODAL STYLES ===== */
+.enroll-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: enrollFadeIn 0.2s ease;
+}
+.enroll-modal-overlay.open { display: flex; }
+@keyframes enrollFadeIn { from { opacity:0; } to { opacity:1; } }
+
+.enroll-modal {
+  background: white;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2.5rem;
+  position: relative;
+  animation: enrollSlideUp 0.28s cubic-bezier(0.34,1.3,0.64,1);
+  box-shadow: 0 32px 80px rgba(0,0,0,0.3);
+}
+@keyframes enrollSlideUp { from { transform: scale(0.9) translateY(20px); opacity:0; } to { transform: scale(1) translateY(0); opacity:1; } }
+
+.enroll-close {
+  position: absolute;
+  top: 1.25rem; right: 1.25rem;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: var(--light-bg);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.enroll-close:hover { background: var(--border); color: var(--text-dark); }
+
+.enroll-back {
+  background: none;
+  border: none;
+  color: var(--green-main);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 0.3rem;
+}
+.enroll-back:hover { color: var(--green-dark); }
+
+.enroll-modal-tag {
+  display: inline-block;
+  background: var(--green-pale);
+  color: var(--green-dark);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.9rem;
+  border-radius: 100px;
+  margin-bottom: 0.75rem;
+}
+.enroll-modal-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--text-dark);
+  margin-bottom: 0.4rem;
+}
+.enroll-modal-header p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+
+/* Centre selection buttons */
+.enroll-centres-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.enroll-centre-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font-body);
+  text-align: left;
+  width: 100%;
+}
+.enroll-centre-btn:hover {
+  border-color: var(--green-main);
+  background: var(--green-muted);
+  transform: translateX(4px);
+}
+.enroll-centre-icon {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: var(--green-pale);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.enroll-centre-icon svg { width: 18px; height: 18px; stroke: var(--green-main); fill: none; }
+.enroll-centre-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.enroll-centre-loc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+.enroll-centre-arrow {
+  margin-left: auto;
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: var(--green-pale);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.enroll-centre-arrow svg { width: 12px; height: 12px; stroke: var(--green-main); fill: none; }
+
+/* Form styles */
+.enroll-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.enroll-form-group { margin-bottom: 1rem; }
+.enroll-form-group label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.4rem;
+}
+.enroll-form-group input,
+.enroll-form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-dark);
+  background: var(--off-white);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  resize: vertical;
+}
+.enroll-form-group input:focus,
+.enroll-form-group textarea:focus {
+  outline: none;
+  border-color: var(--green-main);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(45,106,79,0.1);
+}
+.enroll-submit-btn {
+  width: 100%;
+  display: flex; align-items: center; justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.5rem;
+  background: var(--green-main);
+  color: white;
+  border: none;
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  margin-top: 0.5rem;
+}
+.enroll-submit-btn:hover { background: var(--green-dark); transform: translateY(-2px); }
+.enroll-submit-btn:disabled { background: var(--text-muted); cursor: not-allowed; transform: none; }
+
+/* Success */
+.enroll-success { text-align: center; padding: 1.5rem 0; }
+.enroll-success-icon {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: var(--green-pale);
+  color: var(--green-main);
+  font-size: 1.8rem;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+.enroll-success h4 { font-size: 1.3rem; color: var(--text-dark); margin-bottom: 0.75rem; }
+.enroll-success p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+
+@media (max-width: 480px) {
+  .enroll-modal { padding: 1.75rem 1.25rem; }
+  .enroll-form-row { grid-template-columns: 1fr; }
+}
+</style>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+// =============================================
+// EMAILJS SETUP
+// =============================================
+const EMAILJS_PUBLIC_KEY  = "TzRzcOGem6Y8GBixQ";
+const EMAILJS_SERVICE_ID  = "service_0gxwzsf";
+const EMAILJS_TEMPLATE_ID = "template_e9pful9";
+
+// =============================================
+// CENTRE EMAIL MAPPING (UPDATED WITH YOUR REAL EMAILS)
+// =============================================
+const CENTRE_EMAILS = {
+  "Akilo Centre (Lagos)"        : "hta.akilocentre@gmail.com",
+  "Abule Egba Centre (Lagos)"   : "hta.abuleegbacentre@gmail.com",
+  "Osogbo Centre (Osun)"        : "hta.osogbocentre@gmail.com",
+  "Monatan Centre (Ibadan)"     : "hta.monatancentre@gmail.com",
+  "Tijani Bello Centre (Lagos)" : "hta.tijanibellocentre@gmail.com",
+  "Magodo Centre (Lagos)"       : "hta.magodocentre@gmail.com",
+  "Abuja Centre (Abuja)"        : "hta.abujacentre@gmail.com",
+};
+
+let currentCourse = "";
+let currentCentre = "";
+
+// Initialise EmailJS once
+(function(){
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+})();
+
+function openEnrollModal(course, centres) {
+  currentCourse = course;
+  document.getElementById("enrollCourseTitle").textContent = course;
+  document.getElementById("enrollStep1").style.display = "block";
+  document.getElementById("enrollStep2").style.display = "none";
+  document.getElementById("enrollSuccess").style.display = "none";
+  document.getElementById("enrollForm").style.display = "block";
+
+  // Build centre buttons
+  const list = document.getElementById("enrollCentresList");
+  list.innerHTML = "";
+  centres.forEach(centre => {
+    const loc = centre.replace(/.*\(/, "").replace(")", "");
+    const name = centre.replace(/\s*\(.*\)/, "");
+    list.innerHTML += `
+      <button class="enroll-centre-btn" onclick="selectCentre('${centre}')">
+        <div class="enroll-centre-icon">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div>
+          <div class="enroll-centre-name">${name}</div>
+          <div class="enroll-centre-loc">${loc}</div>
+        </div>
+        <div class="enroll-centre-arrow">
+          <svg viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </div>
+      </button>`;
+  });
+
+  document.getElementById("enrollModalOverlay").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function selectCentre(centre) {
+  currentCentre = centre;
+  document.getElementById("enrollFormTitle").textContent = currentCourse;
+  document.getElementById("enrollSelectedCentre").textContent = "📍 " + centre;
+  document.getElementById("hiddenCourse").value = currentCourse;
+  document.getElementById("hiddenCentre").value = centre;
+  document.getElementById("enrollStep1").style.display = "none";
+  document.getElementById("enrollStep2").style.display = "block";
+}
+
+function backToStep1() {
+  document.getElementById("enrollStep1").style.display = "block";
+  document.getElementById("enrollStep2").style.display = "none";
+}
+
+function closeEnrollModal(e) {
+  if (e && e.target !== document.getElementById("enrollModalOverlay")) return;
+  closeEnrollModalBtn();
+}
+
+function closeEnrollModalBtn() {
+  document.getElementById("enrollModalOverlay").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+document.addEventListener("keydown", function(e) {
+  if (e.key === "Escape") closeEnrollModalBtn();
+});
+
+function submitEnrollForm(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn  = document.getElementById("enrollSubmitBtn");
+  const txt  = document.getElementById("enrollBtnText");
+
+  // Collect form data
+  const params = {
+    to_email   : CENTRE_EMAILS[currentCentre] || "contact@honeytreatacademy.com",
+    course     : currentCourse,
+    centre     : currentCentre,
+    first_name : form.firstName.value,
+    last_name  : form.lastName.value,
+    email      : form.email.value,
+    phone      : form.phone.value,
+    message    : form.message.value || "No additional message.",
+    reply_to   : form.email.value,
+  };
+
+  // Disable button / show loading
+  btn.disabled = true;
+  txt.textContent = "Sending...";
+
+  emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params)
+    .then(function() {
+      document.getElementById("enrollForm").style.display = "none";
+      document.getElementById("successCentreName").textContent = currentCentre;
+      document.getElementById("enrollSuccess").style.display = "block";
+      form.reset();
+      btn.disabled = false;
+      txt.textContent = "Submit Enrollment";
+    })
+    .catch(function(err) {
+      alert("Oops! Something went wrong. Please try again.\nError: " + JSON.stringify(err));
+      btn.disabled = false;
+      txt.textContent = "Submit Enrollment";
+    });
+}
 </script>
 </body>
 </html>

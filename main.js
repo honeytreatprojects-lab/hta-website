@@ -65,20 +65,46 @@ filterBtns.forEach(btn => {
   });
 });
 
+
 // ===== CONTACT FORM =====
 const contactForm = document.getElementById('contactForm');
+
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+
     const btn = contactForm.querySelector('button[type="submit"]');
-    btn.textContent = 'Message Sent! ✓';
-    btn.style.background = 'var(--green-light)';
+    btn.textContent = 'Sending...';
     btn.disabled = true;
+
+    const formData = new FormData(contactForm);
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        btn.textContent = 'Message Sent! ✓';
+        btn.style.background = 'var(--green-light)';
+        contactForm.reset();
+      } else {
+        btn.textContent = 'Error! Try Again';
+        btn.disabled = false;
+      }
+    } catch (error) {
+      btn.textContent = 'Network Error';
+      btn.disabled = false;
+    }
+
     setTimeout(() => {
       btn.textContent = 'Send Message';
       btn.style.background = '';
       btn.disabled = false;
-      contactForm.reset();
     }, 3000);
   });
 }
@@ -139,4 +165,51 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
   });
 });
+
+// ===== NEWSLETTER FORM =====
+const newsletterForm = document.getElementById('newsletterForm');
+
+if (newsletterForm) {
+  newsletterForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const wrap = newsletterForm.querySelector('.newsletter-input-wrap');
+    const note = newsletterForm.querySelector('.newsletter-note');
+    const success = document.getElementById('newsletterSuccess');
+    const btn = newsletterForm.querySelector('.newsletter-btn');
+
+    btn.textContent = 'Subscribing...';
+    btn.disabled = true;
+
+    const formData = new FormData(newsletterForm);
+
+    try {
+      const response = await fetch(newsletterForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        wrap.style.display = 'none';
+        note.style.display = 'none';
+        success.style.display = 'flex';
+        newsletterForm.reset();
+      } else {
+        btn.textContent = 'Try Again';
+        btn.disabled = false;
+      }
+    } catch (error) {
+      btn.textContent = 'Network Error';
+      btn.disabled = false;
+    }
+
+    setTimeout(() => {
+      btn.textContent = 'Subscribe';
+      btn.disabled = false;
+    }, 3000);
+  });
+}
 
