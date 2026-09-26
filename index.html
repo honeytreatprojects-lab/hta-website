@@ -57,7 +57,7 @@
         "telephone": "+2348073342278",
         "email": "contact@honeytreatacademy.com",
         "sameAs": [
-          "https://www.facebook.com/honeytreatacademy",
+          "https://www.facebook.com/Honeytreattradeacademy",
           "https://www.instagram.com/honeytreatacademy",
           "https://www.youtube.com/channel/UCb0mH7NeYaNTUYL1LRljejA",
           "https://x.com/htaacademy01"
@@ -87,8 +87,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@400;500;600&display=swap"></noscript>
+  <link rel="preload" as="image" href="Images/hero2.webp" fetchpriority="high">
+  <link rel="stylesheet" href="styles.min.css">
   <style>
     .pillar-icon {
       font-size: unset;
@@ -191,6 +193,75 @@
       from { transform: translateX(0); }
       to { transform: translateX(-50%); }
     }
+
+    /* PRIVACY / COOKIE CONSENT POPUP */
+    #htaPrivacyOverlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(20, 15, 35, 0.55);
+      z-index: 9998;
+      display: none;
+    }
+    #htaPrivacyPopup {
+      position: fixed;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 640px;
+      background: #ffffff;
+      border-radius: 16px 16px 0 0;
+      box-shadow: 0 -10px 40px rgba(0,0,0,0.2);
+      padding: 1.75rem 1.75rem 1.5rem;
+      z-index: 9999;
+      display: none;
+      font-family: 'DM Sans', sans-serif;
+    }
+    @media (min-width: 700px) {
+      #htaPrivacyPopup {
+        bottom: 24px;
+        border-radius: 16px;
+      }
+    }
+    #htaPrivacyPopup h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      margin: 0 0 0.6rem;
+      color: #1a1a2e;
+    }
+    #htaPrivacyPopup p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: #4b4b5a;
+      margin: 0 0 1rem;
+    }
+    #htaPrivacyPopup a.htaPolicyLink {
+      color: var(--purple-main, #6d28d9);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+    .htaPrivacyActions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .htaPrivacyActions button {
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      padding: 0.65rem 1.3rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: 'DM Sans', sans-serif;
+    }
+    #htaAcceptCookies {
+      background: var(--purple-main, #6d28d9);
+      color: #fff;
+    }
+    #htaRejectCookies {
+      background: #f0eefc;
+      color: #1a1a2e;
+    }
   </style>
 </head>
 <body class="home">
@@ -199,7 +270,7 @@
 <nav class="navbar scrolled" id="navbar">
   <div class="nav-container">
     <a href="index.html" class="nav-logo">
-      <img src="hta-logo.png" alt="Honeytreat Trade Academy Logo" class="nav-logo-img" width="70px">
+      <img src="hta-logo.png" alt="Honeytreat Trade Academy Logo" class="nav-logo-img" width="70px" height="56" decoding="async">
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="nav-link active">Home</a></li>
@@ -306,7 +377,7 @@
     <div class="hero-image-frame">
       <div class="hero-image-inner">
         <div class="hero-img">
-          <img src="study-group-african-people.jpg" alt="Honeytreat Trade Academy students in a vocational training session in Lagos Nigeria">
+          <img width="1600" height="1067" src="study-group-african-people.webp" alt="Honeytreat Trade Academy students in a vocational training session in Lagos Nigeria" decoding="async">
           <div class="scene-label">HTA in Action</div>
         </div>
       </div>
@@ -339,19 +410,19 @@
     </p>
     <div class="partners-marquee">
       <div class="partners-track">
-        <div class="partner-logo"><img src="lsetf.png" alt="LSETF — Lagos State Employment Trust Fund"></div>
-        <div class="partner-logo"><img src="bosch.png" alt="BOSCH — Training Partner"></div>
-        <div class="partner-logo"><img src="nbte.png" alt="NBTE — National Board for Technical Education"></div>
-        <div class="partner-logo"><img src="niob.png" alt="NIOB — Nigerian Institute of Building"></div>
-        <div class="partner-logo"><img src="elizabeth-foundation.png" alt="Elizabeth Foundation"></div>
-        <div class="partner-logo"><img src="aosh.png" alt="AOSH — Academy of Occupational Safety and Health"></div>
+        <div class="partner-logo"><img width="360" height="184" src="lsetf.png" alt="LSETF — Lagos State Employment Trust Fund" loading="lazy" decoding="async"></div>
+        <div class="partner-logo"><img width="360" height="184" src="bosch.png" alt="BOSCH — Training Partner" loading="lazy" decoding="async"></div>
+        <div class="partner-logo"><img width="218" height="231" src="nbte.png" alt="NBTE — National Board for Technical Education" loading="lazy" decoding="async"></div>
+        <div class="partner-logo"><img width="360" height="184" src="niob.webp" alt="NIOB — Nigerian Institute of Building" loading="lazy" decoding="async"></div>
+        <div class="partner-logo"><img width="225" height="225" src="elizabeth-foundation.png" alt="Elizabeth Foundation" loading="lazy" decoding="async"></div>
+        <div class="partner-logo"><img width="264" height="148" src="aosh.png" alt="AOSH — Academy of Occupational Safety and Health" loading="lazy" decoding="async"></div>
         <!-- DUPLICATE for infinite loop -->
-        <div class="partner-logo"><img src="lsetf.png" alt="LSETF — Lagos State Employment Trust Fund"></div>
-        <div class="partner-logo"><img src="bosch.png" alt="BOSCH — Training Partner"></div>
-        <div class="partner-logo"><img src="nbte.png" alt="NBTE — National Board for Technical Education"></div>
-        <div class="partner-logo"><img src="niob.png" alt="NIOB — Nigerian Institute of Building"></div>
-        <div class="partner-logo"><img src="elizabeth-foundation.png" alt="Elizabeth Foundation"></div>
-        <div class="partner-logo"><img src="aosh.png" alt="AOSH — Academy of Occupational Safety and Health"></div>
+        <div class="partner-logo"><img width="360" height="184" src="lsetf.png" alt="LSETF — Lagos State Employment Trust Fund" loading="lazy" decoding="async"></div>
+        <div class="partner-logo"><img width="360" height="184" src="bosch.png" alt="BOSCH — Training Partner" loading="lazy" decoding="async"></div>
+        <div class="partner-logo"><img width="218" height="231" src="nbte.png" alt="NBTE — National Board for Technical Education" loading="lazy" decoding="async"></div>
+        <div class="partner-logo"><img width="360" height="184" src="niob.webp" alt="NIOB — Nigerian Institute of Building" loading="lazy" decoding="async"></div>
+        <div class="partner-logo"><img width="225" height="225" src="elizabeth-foundation.png" alt="Elizabeth Foundation" loading="lazy" decoding="async"></div>
+        <div class="partner-logo"><img width="264" height="148" src="aosh.png" alt="AOSH — Academy of Occupational Safety and Health" loading="lazy" decoding="async"></div>
       </div>
     </div>
   </div>
@@ -408,7 +479,7 @@
   <div class="container about-grid">
     <div class="about-visual">
       <div class="about-img-main">
-        <img src="gallery-construction-class.jpg" alt="Construction skills training students in Lagos Nigeria">
+        <img width="867" height="1080" src="gallery-construction-class.webp" alt="Construction skills training students in Lagos Nigeria" loading="lazy" decoding="async">
       </div>
       <div class="about-img-side">
         <div class="about-stat-box">
@@ -672,11 +743,11 @@
   <div class="container footer-grid">
     <div class="footer-brand">
       <div class="footer-logo">
-        <img src="hta-logo.png" alt="Honeytreat Trade Academy" class="footer-logo-img">
+        <img width="256" height="203" src="hta-logo.png" alt="Honeytreat Trade Academy" class="footer-logo-img" loading="lazy" decoding="async">
       </div>
       <p>Empowering Nigerians with vocational skills that create opportunities, drive prosperity, and build a better future.</p>
       <div class="social-links">
-        <a href="https://www.facebook.com/honeytreatacademy" class="social-link" target="_blank" rel="noopener" aria-label="Honeytreat Trade Academy on Facebook">
+        <a href="https://www.facebook.com/Honeytreattradeacademy" class="social-link" target="_blank" rel="noopener" aria-label="Honeytreat Trade Academy on Facebook">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </a>
         <a href="https://www.instagram.com/honeytreatacademy" class="social-link" target="_blank" rel="noopener" aria-label="Honeytreat Trade Academy on Instagram">
@@ -744,7 +815,7 @@
       <ul>
         <li><a href="connect.html">Student Enrollment</a></li>
         <li><a href="https://chat.whatsapp.com/IYuxshSL3nLK2MAzeVy0af?mode=gi_t" target="_blank" rel="noopener">HTA Community</a></li>
-        <li><a href="quality-policy.pdf">QMS Policy Statement</a></li>
+          <li><a href="qms-policy-statement.pdf">QMS Policy Statement</a></li>
       </ul>
 
       <h4 style="margin-top:1.5rem;">Related Entities</h4>
@@ -802,6 +873,58 @@
 
 </footer>
 
+<!-- PRIVACY NOTICE & COOKIE CONSENT POPUP -->
+<div id="htaPrivacyOverlay"></div>
+<div id="htaPrivacyPopup" role="dialog" aria-labelledby="htaPrivacyTitle" aria-describedby="htaPrivacyDesc">
+  <h3 id="htaPrivacyTitle">Your Privacy Matters to Us</h3>
+  <p id="htaPrivacyDesc">
+    Honeytreat Trade Academy processes personal data — such as your name, contact details and browsing information — in line with the Nigeria Data Protection Act (NDPA) 2023. We use cookies to improve your experience on our site, remember your preferences and understand how our website is used.
+    <a href="privacy-policy.pdf" class="htaPolicyLink" target="_blank" rel="noopener">Read our full Privacy Policy</a>.
+  </p>
+  <div class="htaPrivacyActions">
+    <button id="htaAcceptCookies" type="button">Accept Cookies</button>
+    <button id="htaRejectCookies" type="button">Reject Cookies</button>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var CONSENT_KEY = 'htaCookieConsent';
+    var overlay = document.getElementById('htaPrivacyOverlay');
+    var popup = document.getElementById('htaPrivacyPopup');
+    var acceptBtn = document.getElementById('htaAcceptCookies');
+    var rejectBtn = document.getElementById('htaRejectCookies');
+
+    function showPopup() {
+      overlay.style.display = 'block';
+      popup.style.display = 'block';
+    }
+    function hidePopup() {
+      overlay.style.display = 'none';
+      popup.style.display = 'none';
+    }
+
+    var existingConsent = null;
+    try { existingConsent = localStorage.getItem(CONSENT_KEY); } catch (e) {}
+
+    if (!existingConsent) {
+      showPopup();
+    }
+
+    acceptBtn.addEventListener('click', function () {
+      try { localStorage.setItem(CONSENT_KEY, 'accepted'); } catch (e) {}
+      hidePopup();
+    });
+
+    rejectBtn.addEventListener('click', function () {
+      try { localStorage.setItem(CONSENT_KEY, 'rejected'); } catch (e) {}
+      hidePopup();
+    });
+  })();
+</script>
+
 <script src="main.js"></script>
+<script src="hta-bot.js" defer></script>
+
 </body>
 </html>

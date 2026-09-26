@@ -36,8 +36,9 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@400;500;600&display=swap"></noscript>
+  <link rel="stylesheet" href="styles.min.css">
   <style>
     /* ── Contact image section ── */
     .contact-visual-section {
@@ -202,7 +203,7 @@
 <nav class="navbar scrolled" id="navbar">
   <div class="nav-container">
     <a href="index.html" class="nav-logo">
-      <img src="hta-logo.png" alt="Honeytreat Trade Academy" class="nav-logo-img" width="70px">
+      <img src="hta-logo.png" alt="Honeytreat Trade Academy" class="nav-logo-img" width="70px" height="56" decoding="async">
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="nav-link">Home</a></li>
@@ -248,7 +249,7 @@
       </div>
     </div>
     <div class="contact-visual-img">
-      <img src="connect-hero-img.png" alt="HTA Support Team">
+      <img width="1264" height="843" src="connect-hero-img.webp" alt="HTA Support Team" loading="lazy" decoding="async">
     </div>
   </div>
 </div>
@@ -362,7 +363,7 @@
 
         <!-- Fixed social links for white background -->
         <div class="social-links">
-          <a href="https://www.facebook.com/honeytreatacademy" class="social-link" target="_blank" aria-label="Facebook">
+          <a href="https://www.facebook.com/Honeytreattradeacademy" class="social-link" target="_blank" aria-label="Facebook">
             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
             </svg>
@@ -539,11 +540,11 @@
   <div class="container footer-grid">
     <div class="footer-brand">
       <div class="footer-logo">
-        <img src="hta-logo.png" alt="Honeytreat Trade Academy" class="footer-logo-img">
+        <img width="256" height="203" src="hta-logo.png" alt="Honeytreat Trade Academy" class="footer-logo-img" loading="lazy" decoding="async">
       </div>
       <p>Empowering Nigerians with vocational skills that create opportunities, drive prosperity, and build a better future.</p>
       <div class="social-links">
-        <a href="https://www.facebook.com/honeytreatacademy" class="social-link" target="_blank" rel="noopener" aria-label="Honeytreat Trade Academy on Facebook">
+        <a href="https://www.facebook.com/Honeytreattradeacademy" class="social-link" target="_blank" rel="noopener" aria-label="Honeytreat Trade Academy on Facebook">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </a>
         <a href="https://www.instagram.com/honeytreatacademy" class="social-link" target="_blank" rel="noopener" aria-label="Honeytreat Trade Academy on Instagram">
@@ -670,20 +671,8 @@
 </footer>
 
 <script src="main.js"></script>
-Copy this code and place it before the </body> tag on every page of your website:
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6a0cbaef5323e01c404461ec/1jp0rkdv7';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+<script src="hta-bot.js" defer></script>
+
 
 </body>
 </html>

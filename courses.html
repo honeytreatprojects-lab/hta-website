@@ -72,8 +72,9 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@400;500;600&display=swap"></noscript>
+  <link rel="stylesheet" href="styles.min.css">
   <style>
     /* Course item icons — SVG version */
     .course-item-icon {
@@ -365,7 +366,7 @@
 <nav class="navbar scrolled" id="navbar">
   <div class="nav-container">
     <a href="index.html" class="nav-logo">
-      <img src="hta-logo.png" alt="Honeytreat Trade Academy" class="nav-logo-img" width="70px">
+      <img src="hta-logo.png" alt="Honeytreat Trade Academy" class="nav-logo-img" width="70px" height="56" decoding="async">
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="nav-link">Home</a></li>
@@ -401,7 +402,7 @@
       <!-- CONSTRUCTION -->
       <div class="ccc-dynamic-card">
         <div class="ccc-dynamic-img-wrap">
-          <img src="course-construction.png" alt="Construction Skills" class="ccc-dynamic-img">
+          <img width="375" height="369" src="course-construction.webp" alt="Construction Skills" class="ccc-dynamic-img" loading="lazy" decoding="async">
         </div>
         <div class="ccc-dynamic-body">
           <h3 class="ccc-dynamic-title">Construction Skills</h3>
@@ -442,7 +443,7 @@
       <!-- AGRICULTURE -->
       <div class="ccc-dynamic-card">
         <div class="ccc-dynamic-img-wrap">
-          <img src="course-agriculture.png" alt="Agripreneur Skills" class="ccc-dynamic-img">
+          <img width="375" height="369" src="course-agriculture.webp" alt="Agripreneur Skills" class="ccc-dynamic-img" loading="lazy" decoding="async">
         </div>
         <div class="ccc-dynamic-body">
           <h3 class="ccc-dynamic-title">Agripreneur Skills</h3>
@@ -478,7 +479,7 @@
       <!-- DIGITAL -->
       <div class="ccc-dynamic-card">
         <div class="ccc-dynamic-img-wrap">
-          <img src="course-digital.png" alt="Digital Skills" class="ccc-dynamic-img">
+          <img width="375" height="369" src="course-digital.webp" alt="Digital Skills" class="ccc-dynamic-img" loading="lazy" decoding="async">
         </div>
         <div class="ccc-dynamic-body">
           <h3 class="ccc-dynamic-title">Digital Skills</h3>
@@ -516,7 +517,7 @@
       <!-- ENTERTAINMENT -->
       <div class="ccc-dynamic-card">
         <div class="ccc-dynamic-img-wrap">
-          <img src="course-entertainment.png" alt="Entertainment Skills" class="ccc-dynamic-img">
+          <img width="375" height="369" src="course-entertainment.webp" alt="Entertainment Skills" class="ccc-dynamic-img" loading="lazy" decoding="async">
         </div>
         <div class="ccc-dynamic-body">
           <h3 class="ccc-dynamic-title">Entertainment Skills</h3>
@@ -550,9 +551,9 @@
       <!-- ENROLL CTA CARD -->
       <div class="ccc-enroll-cta-card">
         <div class="ccc-enroll-avatars">
-          <img src="testi-chukwudi.png" alt="" class="ccc-av">
-          <img src="testi-tunde.png" alt="" class="ccc-av">
-          <img src="testi-emeka.png" alt="" class="ccc-av">
+          <img width="307" height="320" src="testi-chukwudi.webp" alt="" class="ccc-av" loading="lazy" decoding="async">
+          <img width="320" height="276" src="testi-tunde.webp" alt="" class="ccc-av" loading="lazy" decoding="async">
+          <img width="300" height="320" src="testi-emeka.webp" alt="" class="ccc-av" loading="lazy" decoding="async">
           <span class="ccc-av-count">700+</span>
         </div>
         <p class="ccc-enroll-text">Unlock your potential and start earning with in-demand skills.</p>
@@ -1021,11 +1022,11 @@
   <div class="container footer-grid">
     <div class="footer-brand">
       <div class="footer-logo">
-        <img src="hta-logo.png" alt="Honeytreat Trade Academy" class="footer-logo-img">
+        <img width="256" height="203" src="hta-logo.png" alt="Honeytreat Trade Academy" class="footer-logo-img" loading="lazy" decoding="async">
       </div>
       <p>Empowering Nigerians with vocational skills that create opportunities, drive prosperity, and build a better future.</p>
       <div class="social-links">
-        <a href="https://www.facebook.com/honeytreatacademy" class="social-link" target="_blank" rel="noopener" aria-label="Honeytreat Trade Academy on Facebook">
+        <a href="https://www.facebook.com/Honeytreattradeacademy" class="social-link" target="_blank" rel="noopener" aria-label="Honeytreat Trade Academy on Facebook">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </a>
         <a href="https://www.instagram.com/honeytreatacademy" class="social-link" target="_blank" rel="noopener" aria-label="Honeytreat Trade Academy on Instagram">
@@ -1575,5 +1576,8 @@ function submitEnrollForm(e) {
     });
 }
 </script>
+<script src="brevo-enroll.js" defer></script>
+<script src="hta-bot.js" defer></script>
+
 </body>
 </html>

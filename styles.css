@@ -304,15 +304,15 @@ p { color: var(--text-body); font-size: 1rem; line-height: 1.75; }
 
 /* Assign images */
 .hero-bg span:nth-child(1) {
-  background-image: url("Images/hero2.png");
+  background-image: url("Images/hero2.webp");
   animation-delay: 0s;
 }
 .hero-bg span:nth-child(2) {
-  background-image: url("Images/hero1.jpg");
+  background-image: url("Images/hero1.webp");
   animation-delay: 5s;
 }
 .hero-bg span:nth-child(3) {
-  background-image: url("Images/hero3.png");
+  background-image: url("Images/hero3.webp");
   animation-delay: 10s;
 }
 .hero-bg span:nth-child(4) {
@@ -865,19 +865,19 @@ p { color: var(--text-body); font-size: 1rem; line-height: 1.75; }
 ========================= */
 
 .cp-img-construction {
-  background-image: url("construction_skills.jpg");
+  background-image: url("construction_skills.webp");
 }
 
 .cp-img-agriculture {
-  background-image: url("Agripreneur_skills.png");
+  background-image: url("Agripreneur_skills.webp");
 }
 
 .cp-img-digital {
-  background-image: url("didital_skills.jpg");
+  background-image: url("didital_skills.webp");
 }
 
 .cp-img-entertainment {
-  background-image: url("entertainment_skills.png");
+  background-image: url("entertainment_skills.webp");
 }
 
 /* =========================
@@ -1037,27 +1037,27 @@ p { color: var(--text-body); font-size: 1rem; line-height: 1.75; }
 /* ===== INDIVIDUAL ALUMNI IMAGES ===== */
 
 .av1 {
-  background-image: url("dami_card2.png");
+  background-image: url("dami_card2.webp");
 }
 
 .av2 {
-  background-image: url("ite\ ego.png");
+  background-image: url("ite\ ego.webp");
 }
 
 .av3 {
-  background-image: url("alumni_3.png");
+  background-image: url("alumni_3.webp");
 }
 
 .av4 {
-  background-image: url("alumni_4.png");
+  background-image: url("alumni_4.webp");
 }
 
 .av5 {
-  background-image: url("alumni_5.png");
+  background-image: url("alumni_5.webp");
 }
 
 .av6 {
-  background-image: url("alumni_6.png");
+  background-image: url("alumni_6.webp");
 }
 
 .alumni-number { text-align: center; }
@@ -1136,15 +1136,15 @@ p { color: var(--text-body); font-size: 1rem; line-height: 1.75; }
 /* ===== REAL IMAGE ASSIGNMENTS ===== */
 
 .ta1 {
-  background-image: url("testi-chukwudi.png");
+  background-image: url("testi-chukwudi.webp");
 }
 
 .ta2 {
-  background-image: url("team-samson.jpg");
+  background-image: url("team-samson.webp");
 }
 
 .ta3 {
-  background-image: url("testi-tunde.png");
+  background-image: url("testi-tunde.webp");
 }
 
 .testi-author strong { display: block; font-size: 0.9rem; }
@@ -2056,3 +2056,6 @@ p { color: var(--text-body); font-size: 1rem; line-height: 1.75; }
     font-size: 0.8rem;
   }
 }
+
+/* hta-speed: keep aspect ratio when <img> has width/height */
+:where(img[width][height]) { height: auto; }

@@ -1,0 +1,90 @@
+HTA speed patch — C:\Users\User\Desktop\HTA Website
+
+== Images ==
+  ✓ Agripreneur_skills.png  819x539 824 KB  →  Agripreneur_skills.webp 819x539 52 KB
+  ✓ HTL_logo design TRANSPARENT.png  14031x9920 672 KB  →  HTL_logo design TRANSPARENT.webp 480x339 10 KB
+  ✓ Images\hero1.jpg  5760x3240 6.95 MB  →  hero1.webp 1920x1080 72 KB
+  ✓ Images\hero2.png  828x492 816 KB  →  hero2.webp 828x492 56 KB
+  ✓ Images\hero3.png  715x349 193 KB  →  hero3.webp 715x349 10 KB
+  ✓ alumni_3.png  382x391 255 KB  →  alumni_3.webp 313x320 11 KB
+  ✓ alumni_4.png  470x502 416 KB  →  alumni_4.webp 300x320 17 KB
+  ✓ alumni_5.png  425x413 313 KB  →  alumni_5.webp 320x311 17 KB
+  ✓ alumni_6.png  311x246 156 KB  →  alumni_6.webp 311x246 13 KB
+  ✓ ayodele.jpg  420x503 173 KB  →  ayodele.webp 420x503 8 KB
+  ✓ blog-agriculture.jpg  5333x3555 9.66 MB  →  blog-agriculture.webp 1600x1067 248 KB
+  ✓ blog-construction.jpg  1600x900 345 KB  →  blog-construction.webp 1600x900 133 KB
+  ✓ blog-digital.jpg  5138x3425 6.41 MB  →  blog-digital.webp 1600x1067 53 KB
+  ✓ blog-events.jpg  1080x761 244 KB  →  blog-events.webp 1080x761 119 KB
+  ✓ ceo-photo.png  918x695 80 KB  →  ceo-photo.webp 918x695 39 KB
+  ✓ classroom.png  900x440 679 KB  →  classroom.webp 900x440 37 KB
+  ✓ connect-hero-img.png  1264x843 173 KB  →  connect-hero-img.webp 1264x843 101 KB
+  ✓ construction_skills.jpg  5280x3520 6.43 MB  →  construction_skills.webp 1600x1067 78 KB
+  ✓ course-agriculture.png  375x369 310 KB  →  course-agriculture.webp 375x369 31 KB
+  ✓ course-construction.png  375x369 338 KB  →  course-construction.webp 375x369 41 KB
+  ✓ course-digital.png  375x369 234 KB  →  course-digital.webp 375x369 17 KB
+  ✓ course-entertainment.png  375x369 211 KB  →  course-entertainment.webp 375x369 15 KB
+  ✓ dami_card2.png  622x897 605 KB  →  dami_card2.webp 222x320 6 KB
+  ✓ didital_skills.jpg  5415x3610 8.53 MB  →  didital_skills.webp 1600x1067 117 KB
+  ✓ entertainment_skills.png  766x535 751 KB  →  entertainment_skills.webp 766x535 41 KB
+  ✓ gallery-business-training.jpg  567x495 451 KB  →  gallery-business-training.webp 567x495 36 KB
+  ✓ gallery-carpentry.jpg  567x495 472 KB  →  gallery-carpentry.webp 567x495 27 KB
+  ✓ gallery-construction-class.jpg  867x1080 98 KB  →  gallery-construction-class.webp 867x1080 76 KB
+  ✓ gallery-electrical-group.jpg  567x495 482 KB  →  gallery-electrical-group.webp 567x495 31 KB
+  ✓ gallery-electrical-training.jpg  960x540 70 KB  →  gallery-electrical-training.webp 960x540 58 KB
+  ✓ gallery-lsetf-cert.jpg  567x495 422 KB  →  gallery-lsetf-cert.webp 567x495 28 KB
+  ✓ gallery-painting-graduates.jpg  2560x1858 1.19 MB  →  gallery-painting-graduates.webp 1600x1161 263 KB
+  ✓ gallery-painting-session.jpg  2560x1890 1.63 MB  →  gallery-painting-session.webp 1600x1181 301 KB
+  ✓ gallery-painting-studio.jpg  2560x1594 711 KB  →  gallery-painting-studio.webp 1600x996 90 KB
+  ✓ gallery-painting-team.jpg  2560x1757 1.20 MB  →  gallery-painting-team.webp 1600x1098 267 KB
+  · gallery-photo-studio.jpg: skipped (WebP not smaller)
+  ✓ gallery-photographer.jpg  687x651 381 KB  →  gallery-photographer.webp 687x651 37 KB
+  ✓ gallery-plumbing-class.jpg  567x495 528 KB  →  gallery-plumbing-class.webp 567x495 40 KB
+  ✓ gallery-skill4u-panel.jpg  960x540 80 KB  →  gallery-skill4u-panel.webp 960x540 67 KB
+  ✓ gallery-student-artwork1.jpg  1600x1493 811 KB  →  gallery-student-artwork1.webp 1600x1493 417 KB
+  ✓ gallery-student-artwork2.jpg  1600x1492 801 KB  →  gallery-student-artwork2.webp 1600x1492 397 KB
+  ✓ gallery-tiling-fieldwork.jpg  960x540 65 KB  →  gallery-tiling-fieldwork.webp 960x540 56 KB
+  · gallery-video-studio.jpg: skipped (WebP not smaller)
+  ✓ gloria.jpg  420x503 314 KB  →  gloria.webp 420x503 26 KB
+  ✓ ite ego.png  535x508 424 KB  →  ite ego.webp 320x304 12 KB
+  ✓ james.jpg  420x503 314 KB  →  james.webp 420x503 34 KB
+  ✓ job.jpg  420x503 289 KB  →  job.webp 420x503 32 KB
+  ✓ moses.jpg  420x503 316 KB  →  moses.webp 420x503 16 KB
+  ✓ niob.png  360x184 61 KB  →  niob.webp 360x184 9 KB
+  ✓ olayinka.jpg  420x503 205 KB  →  olayinka.webp 420x503 16 KB
+  ✓ olumide.jpg  420x503 129 KB  →  olumide.webp 420x503 7 KB
+  ✓ segun.jpg  420x503 217 KB  →  segun.webp 420x503 9 KB
+  ✓ study-group-african-people.jpg  4144x2763 1.07 MB  →  study-group-african-people.webp 1600x1067 97 KB
+  ✓ team-bolarinwa.jpg  2732x3014 1.40 MB  →  team-bolarinwa.webp 725x800 37 KB
+  ✓ team-emmanuel.png  420x503 334 KB  →  team-emmanuel.webp 420x503 16 KB
+  ✓ team-feranmi.png  420x503 340 KB  →  team-feranmi.webp 420x503 12 KB
+  ✓ team-kate.png  420x503 261 KB  →  team-kate.webp 420x503 18 KB
+  ✓ team-lekan.png  420x503 210 KB  →  team-lekan.webp 420x503 12 KB
+  ✓ team-michael.png  420x503 225 KB  →  team-michael.webp 420x503 11 KB
+  ✓ team-samson.jpg  3840x5760 12.14 MB  →  team-samson.webp 533x800 29 KB
+  ✓ testi-amina.png  408x612 35 KB  →  testi-amina.webp 213x320 6 KB
+  ✓ testi-blessing.png  527x522 57 KB  →  testi-blessing.webp 320x317 16 KB
+  ✓ testi-chukwudi.png  367x382 18 KB  →  testi-chukwudi.webp 307x320 6 KB
+  ✓ testi-emeka.png  367x392 39 KB  →  testi-emeka.webp 300x320 18 KB
+  ✓ testi-fatima.png  315x356 23 KB  →  testi-fatima.webp 283x320 11 KB
+  ✓ testi-tunde.png  597x515 56 KB  →  testi-tunde.webp 320x276 11 KB
+  ✓ training.jpg  5616x3744 9.72 MB  →  training.webp 1600x1067 83 KB
+  Total saved on converted images: 78.99 MB
+
+== CSS ==
+  ~ styles.css: image URLs → .webp, added img aspect-ratio rule
+  ✓ styles.min.css  49 KB → 37 KB
+
+== Pages ==
+  ~ about.html: removed Tawk.to; fonts non-blocking; → styles.min.css; img: 20 → webp, 34 sized, 33 lazy; added hta-bot.js
+  ~ blog.html: removed Tawk.to; fonts non-blocking; → styles.min.css; img: 0 → webp, 2 sized, 1 lazy; inline CSS images → webp; added hta-bot.js
+  ~ connect.html: removed Tawk.to; fonts non-blocking; → styles.min.css; img: 1 → webp, 3 sized, 2 lazy; added hta-bot.js
+  ~ courses.html: removed Tawk.to; fonts non-blocking; → styles.min.css; img: 7 → webp, 9 sized, 8 lazy; added hta-bot.js; added brevo-enroll.js
+  ~ gallery.html: removed Tawk.to; fonts non-blocking; → styles.min.css; img: 26 → webp, 32 sized, 2 lazy; added hta-bot.js
+  ~ index.html: removed Tawk.to; fonts non-blocking; → styles.min.css; img: 4 → webp, 16 sized, 14 lazy; preload hero image; added hta-bot.js
+  ~ public\index.html: added hta-bot.js
+  ~ testimonials.html: removed Tawk.to; fonts non-blocking; → styles.min.css; img: 6 → webp, 8 sized, 7 lazy; added hta-bot.js
+
+== Broken image references (these cause 404 errors in the browser console) ==
+  ✗ img4.jpg  —  missing (404)  (used in styles.css)
+
+Backup of the original files: _hta_backup_20260926-093916/

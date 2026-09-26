@@ -31,8 +31,9 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@400;500;600&display=swap"></noscript>
+  <link rel="stylesheet" href="styles.min.css">
   <style>
     /* Value card icon */
     .value-icon {
@@ -95,7 +96,7 @@
 <nav class="navbar scrolled" id="navbar">
   <div class="nav-container">
     <a href="index.html" class="nav-logo">
-      <img src="hta-logo.png" alt="Honeytreat Trade Academy" class="nav-logo-img" width="70px">
+      <img src="hta-logo.png" alt="Honeytreat Trade Academy" class="nav-logo-img" width="70px" height="56" decoding="async">
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="nav-link">Home</a></li>
@@ -126,7 +127,7 @@
 
   <!-- MAIN IMAGE -->
   <div class="about-img-main">
-    <img src="training.jpg" alt="Training Session">
+    <img width="1600" height="1067" src="training.webp" alt="Training Session" loading="lazy" decoding="async">
   </div>
 
   <!-- SIDE ELEMENTS -->
@@ -134,7 +135,7 @@
     
     <!-- SMALL IMAGE -->
     <div class="about-img-small">
-      <img src="classroom.png" alt="Classroom Training">
+      <img width="900" height="440" src="classroom.webp" alt="Classroom Training" loading="lazy" decoding="async">
     </div>
 
     <!-- STAT BOX -->
@@ -181,7 +182,7 @@
       <div class="ceo-img">
         <div class="ceo-img-inner">
           <!-- CEO real photo replacing the placeholder -->
-          <img src="ceo-photo.png" alt="Samson Soyebi – CEO, Honeytreat Group" class="ceo-real-photo">
+          <img width="918" height="695" src="ceo-photo.webp" alt="Samson Soyebi – CEO, Honeytreat Group" class="ceo-real-photo" loading="lazy" decoding="async">
         </div>
         <div class="ceo-badge">
           <strong>Samson Soyebi</strong>
@@ -289,7 +290,7 @@
 
       <div class="team-card">
   <div class="team-photo">
-    <img src="team-kate.png" alt="Kate Nyong">
+    <img width="420" height="503" src="team-kate.webp" alt="Kate Nyong" loading="lazy" decoding="async">
   </div>
   <h4>Kate Nyong</h4>
   <span>Business Manager</span>
@@ -297,7 +298,7 @@
 
 <div class="team-card">
   <div class="team-photo">
-    <img src="team-lekan.png" alt="Lekan Akerele">
+    <img width="420" height="503" src="team-lekan.webp" alt="Lekan Akerele" loading="lazy" decoding="async">
   </div>
   <h4>Lekan Akerele</h4>
   <span>Training Manager</span>
@@ -305,7 +306,7 @@
 
 <div class="team-card">
   <div class="team-photo">
-    <img src="team-bolarinwa.jpg" alt="Bolarinwa Tijesu">
+    <img width="725" height="800" src="team-bolarinwa.webp" alt="Bolarinwa Tijesu" loading="lazy" decoding="async">
   </div>
   <h4>Bolarinwa Tijesu</h4>
   <span>Brand/Creative Manager, HTA</span>
@@ -313,7 +314,7 @@
 
 <div class="team-card">
   <div class="team-photo">
-    <img src="team-emmanuel.png" alt="Emmanuel Akinade">
+    <img width="420" height="503" src="team-emmanuel.webp" alt="Emmanuel Akinade" loading="lazy" decoding="async">
   </div>
   <h4>Emmanuel Akinade</h4>
   <span>Centre Manager, Akilo</span>
@@ -321,7 +322,7 @@
 
 <div class="team-card">
   <div class="team-photo">
-    <img src="team-feranmi.png" alt="Feranmi Abiodun">
+    <img width="420" height="503" src="team-feranmi.webp" alt="Feranmi Abiodun" loading="lazy" decoding="async">
   </div>
   <h4>Feranmi Abiodun</h4>
   <span>Monatan Centre Manager, Ibadan</span>
@@ -329,7 +330,7 @@
 
 <div class="team-card">
   <div class="team-photo">
-    <img src="team-samson.jpg" alt="Damilola Yusuf">
+    <img width="533" height="800" src="team-samson.webp" alt="Damilola Yusuf" loading="lazy" decoding="async">
   </div>
   <h4>Damilola Yusuf</h4>
   <span>Digital Operations Manager</span>
@@ -337,7 +338,7 @@
 
 <div class="team-card">
   <div class="team-photo">
-    <img src="team-michael.png" alt="Michael Edun">
+    <img width="420" height="503" src="team-michael.webp" alt="Michael Edun" loading="lazy" decoding="async">
   </div>
   <h4>Michael Edun</h4>
   <span>Centre Manager, Tijani Digital Skill Centre</span>
@@ -345,7 +346,7 @@
 
 <div class="team-card">
   <div class="team-photo">
-    <img src="team-caleb.jpg" alt="Caleb Davou">
+    <img width="480" height="572" src="team-caleb.jpg" alt="Caleb Davou" loading="lazy" decoding="async">
   </div>
   <h4>Caleb Davou</h4>
   <span>Centre Manager, Abuja</span>
@@ -366,7 +367,7 @@
 
   <div class="team-card">
   <div class="team-photo">
-    <img src="olumide.jpg" alt="Olumide Oladele">
+    <img width="420" height="503" src="olumide.webp" alt="Olumide Oladele" loading="lazy" decoding="async">
   </div>
   <h4>Olumide Oladele</h4>
   <span>Digital Marketing Instructor, Tijani Centre</span>
@@ -374,7 +375,7 @@
 
 <div class="team-card">
   <div class="team-photo">
-    <img src="gloria.jpg" alt="Gloria Olaniyan">
+    <img width="420" height="503" src="gloria.webp" alt="Gloria Olaniyan" loading="lazy" decoding="async">
   </div>
   <h4>Gloria Olaniyan</h4>
   <span>Data Analysis Instructor, Tijani Centre</span>
@@ -382,7 +383,7 @@
 
 <div class="team-card">
   <div class="team-photo">
-    <img src="job.jpg" alt="Job Olaniran">
+    <img width="420" height="503" src="job.webp" alt="Job Olaniran" loading="lazy" decoding="async">
   </div>
   <h4>Job Olaniran</h4>
   <span>Data Analysis Instructor, Tijani Centre</span>
@@ -390,7 +391,7 @@
 
 <div class="team-card">
   <div class="team-photo">
-    <img src="ayodele.jpg" alt="Ayodele Agbowuro">
+    <img width="420" height="503" src="ayodele.webp" alt="Ayodele Agbowuro" loading="lazy" decoding="async">
   </div>
   <h4>Ayodele Agbowuro</h4>
   <span>Software Development Instructor, Tijani Centre</span>
@@ -398,7 +399,7 @@
 
 <div class="team-card">
   <div class="team-photo">
-    <img src="moses.jpg" alt="Moses Obinna">
+    <img width="420" height="503" src="moses.webp" alt="Moses Obinna" loading="lazy" decoding="async">
   </div>
   <h4>Moses Obinna</h4>
   <span>Data Analyst Instructor, Tijani Centre</span>
@@ -406,7 +407,7 @@
 
 <div class="team-card">
   <div class="team-photo">
-    <img src="olayinka.jpg" alt="Olayinka Fanusyiona">
+    <img width="420" height="503" src="olayinka.webp" alt="Olayinka Fanusyiona" loading="lazy" decoding="async">
   </div>
   <h4>Olayinka Fanusyiona</h4>
   <span>Plumbing, Carpentry & Tiling Instructor</span>
@@ -414,7 +415,7 @@
 
 <div class="team-card">
   <div class="team-photo">
-    <img src="james.jpg" alt="James Kehinde">
+    <img width="420" height="503" src="james.webp" alt="James Kehinde" loading="lazy" decoding="async">
   </div>
   <h4>James Kehinde</h4>
   <span>Landscape, Carpentry & Tiling Instructor</span>
@@ -422,7 +423,7 @@
 
 <div class="team-card">
   <div class="team-photo">
-    <img src="segun.jpg" alt="Segun Adebanjo">
+    <img width="420" height="503" src="segun.webp" alt="Segun Adebanjo" loading="lazy" decoding="async">
   </div>
   <h4>Segun Adebanjo</h4>
   <span>Digital Marketing Instructor, Tijani Centre</span>
@@ -447,55 +448,55 @@
   <div class="partners-logos">
 
     <div class="partner-logo">
-      <img src="lsetf.png" alt="LSETF">
+      <img width="360" height="184" src="lsetf.png" alt="LSETF" loading="lazy" decoding="async">
     </div>
 
     <div class="partner-logo">
-      <img src="bosch.png" alt="Bosch">
+      <img width="360" height="184" src="bosch.png" alt="Bosch" loading="lazy" decoding="async">
     </div>
 
     <div class="partner-logo">
-      <img src="nbte.png" alt="NBTE">
+      <img width="218" height="231" src="nbte.png" alt="NBTE" loading="lazy" decoding="async">
     </div>
 
     <div class="partner-logo">
-      <img src="ask.png" alt="ASK">
+      <img width="226" height="184" src="ask.png" alt="ASK" loading="lazy" decoding="async">
     </div>
 
     <div class="partner-logo">
-      <img src="ishk.png" alt="IskiK Hub">
+      <img width="360" height="184" src="ishk.png" alt="IskiK Hub" loading="lazy" decoding="async">
     </div>
 
     <div class="partner-logo">
-      <img src="aosh.png" alt="AOSH">
+      <img width="264" height="148" src="aosh.png" alt="AOSH" loading="lazy" decoding="async">
     </div>
 
     <div class="partner-logo">
-      <img src="federal.png" alt="Federal">
+      <img width="226" height="184" src="federal.png" alt="Federal" loading="lazy" decoding="async">
     </div>
 
     <div class="partner-logo">
-      <img src="elizabeth-foundation.png" alt="Elizabeth">
+      <img width="225" height="225" src="elizabeth-foundation.png" alt="Elizabeth" loading="lazy" decoding="async">
     </div>
 
     <div class="partner-logo">
-      <img src="niob.png" alt="NIOB">
+      <img width="360" height="184" src="niob.webp" alt="NIOB" loading="lazy" decoding="async">
     </div>
 
     <div class="partner-logo">
-      <img src="HTL_logo design TRANSPARENT.png" alt="HTL">
+      <img width="480" height="339" src="HTL_logo design TRANSPARENT.webp" alt="HTL" loading="lazy" decoding="async">
     </div>
 
     <div class="partner-logo">
-      <img src="usadf.jpg" alt="HTL">
+      <img width="290" height="174" src="usadf.jpg" alt="HTL" loading="lazy" decoding="async">
     </div>
 
     <div class="partner-logo">
-      <img src="oil.png" alt="HTL">
+      <img width="273" height="142" src="oil.png" alt="HTL" loading="lazy" decoding="async">
     </div>
 
     <div class="partner-logo">
-      <img src="iadn.jpg" alt="HTL">
+      <img width="275" height="183" src="iadn.jpg" alt="HTL" loading="lazy" decoding="async">
     </div>
 
   </div>
@@ -524,11 +525,11 @@
   <div class="container footer-grid">
     <div class="footer-brand">
       <div class="footer-logo">
-        <img src="hta-logo.png" alt="Honeytreat Trade Academy" class="footer-logo-img">
+        <img width="256" height="203" src="hta-logo.png" alt="Honeytreat Trade Academy" class="footer-logo-img" loading="lazy" decoding="async">
       </div>
       <p>Empowering Nigerians with vocational skills that create opportunities, drive prosperity, and build a better future.</p>
       <div class="social-links">
-        <a href="https://www.facebook.com/honeytreatacademy" class="social-link" target="_blank" rel="noopener" aria-label="Honeytreat Trade Academy on Facebook">
+        <a href="https://www.facebook.com/Honeytreattradeacademy" class="social-link" target="_blank" rel="noopener" aria-label="Honeytreat Trade Academy on Facebook">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </a>
         <a href="https://www.instagram.com/honeytreatacademy" class="social-link" target="_blank" rel="noopener" aria-label="Honeytreat Trade Academy on Instagram">
@@ -655,6 +656,8 @@
 </footer>
 
 <script src="main.js"></script>
+<script src="hta-bot.js" defer></script>
+
 
 </body>
 </html>
