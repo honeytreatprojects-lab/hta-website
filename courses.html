@@ -1215,6 +1215,14 @@
           <input type="tel" name="phone" placeholder="+234 800 000 0000" required>
         </div>
         <div class="enroll-form-group">
+          <label>Course You Want to Do *</label>
+          <select name="courseChoice" id="courseSelect" required></select>
+        </div>
+        <div class="enroll-form-group">
+          <label>Training Centre *</label>
+          <select name="centreChoice" id="centreSelect" required></select>
+        </div>
+         <div class="enroll-form-group">
           <label>Message / Questions (optional)</label>
           <textarea name="message" placeholder="Any questions or special requirements?" rows="3"></textarea>
         </div>
@@ -1392,6 +1400,25 @@
   transition: border-color 0.2s, box-shadow 0.2s;
   resize: vertical;
 }
+
+.enroll-form-group select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-dark);
+  background: var(--off-white);
+  cursor: pointer;
+}
+.enroll-form-group select:focus {
+  outline: none;
+  border-color: var(--green-main);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(45,106,79,0.1);
+}
+
 .enroll-form-group input:focus,
 .enroll-form-group textarea:focus {
   outline: none;
@@ -1462,6 +1489,30 @@ const CENTRE_EMAILS = {
   "Abuja Centre (Abuja)"        : "hta.abujacentre@gmail.com",
 };
 
+const COURSES_BY_TRACK = {
+  "Construction Skills": [
+    "Domestic Water Supply", "Pipe Fitting Installation",
+    "Electrical Wiring & Installation", "Welding & Fabrication",
+    "Carpentry & Furniture Making", "Masonry & Tiling Work",
+    "Painting & Decorative", "Construction Site Management"
+  ],
+  "Agripreneur Skills": [
+    "Fish Farming", "Snail Farming", "Agrotech & Digital Agriculture",
+    "Agricultural Management & Value Chain Optimization",
+    "Post-Harvest Technology & Value Addition"
+  ],
+  "Digital Skills": [
+    "Software Engineering", "Project Management", "Software Development",
+    "Data Analytics", "Digital Marketing"
+  ],
+  "Entertainment Skills": [
+    "Music Production", "Live Sound Engineering", "Digital Mixing Console",
+    "Cinematography", "Video Editing"
+  ]
+};
+
+let currentCentres = [];
+
 let currentCourse = "";
 let currentCentre = "";
 
@@ -1471,6 +1522,7 @@ let currentCentre = "";
 })();
 
 function openEnrollModal(course, centres) {
+  currentCentres = centres;
   currentCourse = course;
   document.getElementById("enrollCourseTitle").textContent = course;
   document.getElementById("enrollStep1").style.display = "block";
@@ -1516,6 +1568,25 @@ function selectCentre(centre) {
   document.getElementById("hiddenCentre").value = centre;
   document.getElementById("enrollStep1").style.display = "none";
   document.getElementById("enrollStep2").style.display = "block";
+
+  // Centre dropdown (pre-selects the centre they clicked)
+  document.getElementById("centreSelect").innerHTML = currentCentres
+    .map(c => `<option value="${c}" ${c === centre ? "selected" : ""}>${c}</option>`)
+    .join("");
+
+  // Course dropdown
+  let html = '<option value="" disabled selected>Select a course</option>';
+  if (COURSES_BY_TRACK[currentCourse]) {
+    html += COURSES_BY_TRACK[currentCourse].map(c => `<option value="${c}">${c}</option>`).join("");
+  } else {
+    // "All Courses": group by track
+    for (const track in COURSES_BY_TRACK) {
+      html += `<optgroup label="${track}">` +
+        COURSES_BY_TRACK[track].map(c => `<option value="${c}">${c}</option>`).join("") +
+        `</optgroup>`;
+    }
+  }
+  document.getElementById("courseSelect").innerHTML = html;
 }
 
 function backToStep1() {
@@ -1543,11 +1614,20 @@ function submitEnrollForm(e) {
   const btn  = document.getElementById("enrollSubmitBtn");
   const txt  = document.getElementById("enrollBtnText");
 
+  // Values chosen in the two dropdowns
+  const chosenCourse = form.courseChoice.value;
+  const chosenCentre = form.centreChoice.value;
+
+  // Keep hidden fields in sync (in case brevo-enroll.js reads them)
+  document.getElementById("hiddenCourse").value = chosenCourse;
+  document.getElementById("hiddenCentre").value = chosenCentre;
+
   // Collect form data
   const params = {
-    to_email   : CENTRE_EMAILS[currentCentre] || "contact@honeytreatacademy.com",
-    course     : currentCourse,
-    centre     : currentCentre,
+    to_email   : CENTRE_EMAILS[chosenCentre] || "contact@honeytreatacademy.com",
+    track      : currentCourse,
+    course     : chosenCourse,
+    centre     : chosenCentre,
     first_name : form.firstName.value,
     last_name  : form.lastName.value,
     email      : form.email.value,
@@ -1563,7 +1643,7 @@ function submitEnrollForm(e) {
   emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params)
     .then(function() {
       document.getElementById("enrollForm").style.display = "none";
-      document.getElementById("successCentreName").textContent = currentCentre;
+      document.getElementById("successCentreName").textContent = chosenCentre;
       document.getElementById("enrollSuccess").style.display = "block";
       form.reset();
       btn.disabled = false;
